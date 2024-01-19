@@ -1,0 +1,23 @@
+{
+  "HideFlags": 6,
+  "PublicBukkitValues": {
+    "blossommc:item_id": "netherite_axe_plus"
+  },
+  "display": {
+    "Lore": [
+      "{\"italic\":false,\"color\":\"gray\",\"extra\":[{\"color\":\"gold\",\"extra\":[{\"bold\":true,\"text\":\"INFO\"},{\"text\":\" \"},{\"color\":\"gray\",\"text\":\"----------\"}],\"text\":\"\"}],\"text\":\"---------- \"}",
+      "{\"italic\":false,\"color\":\"gray\",\"extra\":[{\"extra\":[{\"color\":\"#00FF00\",\"text\":\"U\"},{\"color\":\"#24FF24\",\"text\":\"n\"},{\"color\":\"#49FF49\",\"text\":\"c\"},{\"color\":\"#6DFF6D\",\"text\":\"o\"},{\"color\":\"#92FF92\",\"text\":\"m\"},{\"color\":\"#B6FFB6\",\"text\":\"m\"},{\"color\":\"#DBFFDB\",\"text\":\"o\"},{\"color\":\"white\",\"text\":\"n\"}],\"text\":\"\"}],\"text\":\"Rarity: \"}",
+      "{\"italic\":false,\"color\":\"gray\",\"extra\":[{\"color\":\"gold\",\"text\":\"Tool\"}],\"text\":\"Type: \"}",
+      "{\"text\":\"\"}",
+      "{\"italic\":false,\"color\":\"gray\",\"extra\":[{\"color\":\"gold\",\"extra\":[{\"bold\":true,\"text\":\"DESCRIPTION\"},{\"text\":\" \"},{\"color\":\"gray\",\"text\":\"----------\"}],\"text\":\"\"}],\"text\":\"---------- \"}",
+      "{\"italic\":false,\"color\":\"gray\",\"text\":\"A netherite axe with a little extra power.\"}",
+      "{\"italic\":false,\"color\":\"gray\",\"text\":\"Has the ability to drop more logs when breaking trees.\"}",
+      "{\"text\":\"\"}",
+      "{\"italic\":false,\"color\":\"gray\",\"extra\":[{\"color\":\"gold\",\"extra\":[{\"bold\":true,\"text\":\"EXTRAS\"},{\"text\":\" \"},{\"color\":\"gray\",\"text\":\"----------\"}],\"text\":\"\"}],\"text\":\"---------- \"}",
+      "{\"italic\":false,\"color\":\"white\",\"extra\":[{\"color\":\"gold\",\"text\":\"1.0\"}],\"text\":\"Attack Speed: \"}",
+      "{\"italic\":false,\"color\":\"white\",\"extra\":[{\"color\":\"gold\",\"text\":\"11.0\"}],\"text\":\"Damage: \"}"
+    ],
+    "Name": "{\"italic\":false,\"text\":\"Netherite Axe+\"}"
+  },
+  "generic.attack_speed": "1.0f"
+}

@@ -1,0 +1,1 @@
+wt new-tab -p "Windows PowerShell" -d ./proxy ; split-pane -p "Windows PowerShell" -V -d "D:\Github\BlossomMC\run\hub"

@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    annotationProcessor(project(":minestom-core"))
+    implementation(project(":minestom-core"))
+}
+
+tasks {
+    shadowJar {
+        destinationDirectory.set(file('../run/survival'))
+        manifest {
+            attributes 'Main-Class': 'net.blossom.survival.Survival'
+        }
+    }
+
+}

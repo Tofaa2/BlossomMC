@@ -1,0 +1,4 @@
+{
+  "mongo-uri": "mongodb+srv://admin:0WzMvNIc6IPDOwYc@cluster0.0d90qx7.mongodb.net/?retryWrites=true&w=majority",
+  "database-name": "proxy"
+}

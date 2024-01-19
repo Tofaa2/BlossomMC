@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api 'org.mongodb:mongodb-driver-sync:4.11.1'
+    api 'org.jetbrains:annotations:24.0.0'
+}

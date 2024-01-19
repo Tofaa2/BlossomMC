@@ -1,0 +1,27 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    annotationProcessor(project(":minestom-core"))
+    implementation(project(":minestom-core"))
+}
+
+tasks {
+    shadowJar {
+        destinationDirectory.set(file('../run/hub'))
+        manifest {
+            attributes 'Main-Class': 'net.blossom.hub.Hub'
+        }
+    }
+
+}

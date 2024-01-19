@@ -1,0 +1,10 @@
+rootProject.name = 'BlossomMC'
+include 'proxy'
+include 'hub'
+include 'minestom-core'
+include 'dbm'
+include 'commons'
+include 'communication-utils'
+include 'velocity-command-api'
+include 'survival'
+

@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+
+allprojects{
+    apply plugin: 'java'
+
+    group = 'net.blossom.' + project.name
+    version = '1.0'
+}

@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+    id 'java-library'
+}
+
+def autoService = 'com.google.auto.service:auto-service:1.1.1'
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+
+    group = 'net.blossommc'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+        maven {
+            url = "https://jitpack.io/"
+        }
+    }
+
+}
+
+subprojects {
+
+    def subprojectName = name
+
+    dependencies {
+        compileOnly autoService
+        annotationProcessor autoService
+        if (subprojectName != 'core') {
+            compileOnly(project(':core'))
+        }
+    }
+}
+
+dependencies {
+
+    implementation autoService
+    annotationProcessor autoService
+
+    api 'dev.hollowcube:minestom-ce:5bcc72b911'
+    api 'net.kyori:adventure-text-minimessage:4.14.0'
+
+    implementation('ch.qos.logback:logback-classic:1.4.11')
+
+}
+
+tasks {
+    compileJava {
+        options.encoding = 'UTF-8'
+    }
+
+    shadowJar {
+        manifest {
+            attributes 'Main-Class': 'net.blossommc.Application'
+        }
+    }
+}

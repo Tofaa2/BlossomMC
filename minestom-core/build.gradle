@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+}
+
+def autoService = 'com.google.auto.service:auto-service:1.1.1'
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    api project(':communication-utils')
+    api project(':commons')
+    api project(':dbm')
+
+    api autoService
+    annotationProcessor autoService
+
+    api 'dev.hollowcube:minestom-ce-snapshots:1_20_4-08ea9e15f0'
+
+    api 'net.kyori:adventure-text-minimessage:4.14.0'
+
+
+    api('com.google.code.gson:gson:2.10.1') {
+        version {
+            strictly '2.10.1'
+        }
+    }
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+}

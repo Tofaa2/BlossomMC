@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id("io.papermc.paperweight.userdev") version "1.5.9"
+    id 'com.github.johnrengelman.shadow' version '8.1.0'
+}
+group = 'net.blossommc'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+    maven {
+        url = 'https://jitpack.io/'
+    }
+    mavenLocal()
+    mavenCentral()
+    maven {
+        name = 'papermc'
+        url = 'https://papermc.io/repo/repository/maven-public/'
+    }
+    maven {
+        name = 'codemc-repo'
+        url = 'https://repo.codemc.io/repository/maven-releases/'
+    }
+    maven {
+        url = "https://oss.sonatype.org/content/groups/public/"
+    }
+    maven { url = "https://repo.codemc.org/repository/maven-public/" }
+}
+
+dependencies {
+    paperweight.paperDevBundle("1.20.2-R0.1-SNAPSHOT")
+
+    implementation 'com.github.MegavexNetwork.scoreboard-library:scoreboard-library-api:2.0.0'
+    implementation 'com.github.MegavexNetwork.scoreboard-library:scoreboard-library-implementation:2.0.0'
+    implementation 'com.github.MegavexNetwork.scoreboard-library:scoreboard-library-modern:2.0.0'
+
+    compileOnly("com.github.retrooper.packetevents:spigot:2.0.2")
+    implementation "dev.jorel:commandapi-bukkit-shade:9.2.0"
+}
+
+tasks {
+    compileJava {
+        options.encoding = 'UTF-8'
+    }
+}

@@ -1,0 +1,29 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+repositories {
+    maven {
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+    maven{
+        url = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'com.velocitypowered:velocity-api:3.3.0-SNAPSHOT'
+    annotationProcessor 'com.velocitypowered:velocity-api:3.3.0-SNAPSHOT'
+
+    implementation(project(':communication-utils'))
+    implementation(project(':dbm'))
+    implementation(project(':velocity-command-api'))
+}
+
+tasks {
+    shadowJar {
+        destinationDirectory.set(file('../run/proxy/plugins'))
+    }
+}
